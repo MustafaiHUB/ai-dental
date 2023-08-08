@@ -1,0 +1,129 @@
+/* === START HERO SECTION === */
+#hero {
+  position: relative;
+  height: 70vh;
+
+  background-image: url("../Images/hero-image-01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+h1 span {
+  font-size: 70px !important;
+}
+@media (max-width: 585px) {
+  h1 span {
+    font-size: 50px !important;
+  }
+}
+/* === END HERO SECTION === */
+
+/* === START ABOUT US === */
+#about-us {
+  padding-top: var(--padding-top-100);
+  padding-bottom: var(--padding-bottom-100);
+}
+#about-us .container .about-summery {
+  margin-top: 50px;
+}
+#about-us .container .about-summery p {
+  margin-right: 20px;
+  height: fit-content;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+@media (max-width: 768px) {
+  #about-us .container .about-summery p {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+#about-us .container .about-summery img {
+  width: 100%;
+}
+/* === END ABOUT US === */
+
+/* === START OUR PROJECTS === */
+#our-projects {
+  padding-bottom: calc(var(--padding-bottom-100) / 2);
+}
+#our-projects .container .projects-holder {
+  margin-top: 50px;
+}
+#our-projects .container .projects-holder .card {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+#our-projects .container .projects-holder .card:not(:last-child) {
+  border-bottom: 2px dashed var(--main-color);
+}
+#our-projects .container .projects-holder .card p {
+  line-height: 1.3;
+  font-size: 18px;
+  text-align: justify;
+  color: var(--dark-color);
+}
+#our-projects .container .projects-holder .card img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #our-projects .container .projects-holder .card img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+/* === END OUR PROJECTS === */
+
+/* === START OUR PROJECTS === */
+#our-team {
+  padding-bottom: var(--padding-bottom-100);
+}
+#our-team .container .team-holder {
+  margin-top: 50px;
+}
+#our-team .container .card {
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 10px 0 var(--light-color);
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 5px;
+  transition: var(--transition-3m);
+}
+#our-team .container .card:hover {
+  box-shadow: 10px 10px 10px 10px var(--light-color);
+  transform: translateY(-10px);
+}
+#our-team .container .card img {
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#our-team .container .card q {
+  display: block;
+  margin: 15px 0;
+  font-style: italic;
+  font-size: 16px;
+}
+#our-team .container .card a {
+  background-color: var(--main-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: var(--transition-3m);
+}
+#our-team .container .card a i {
+  color: var(--light-color);
+  margin-right: 10px;
+}
+#our-team .container .card a:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+#our-team .container .card a:hover i {
+  color: var(--main-color);
+}
+
+/* === END OUR PROJECTS === */

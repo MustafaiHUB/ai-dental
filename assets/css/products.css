@@ -1,0 +1,310 @@
+/* === START HERO SECTION === */
+#hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+}
+#hero .overlay {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+}
+#hero video {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1199px) {
+  #hero {
+    flex-direction: column;
+  }
+  #hero .text {
+    text-align: center;
+    width: 100%;
+  }
+  #hero video {
+    height: 70%;
+  }
+}
+@media (max-width: 599px) {
+  #hero .text h1 {
+    font-size: 40px !important;
+  }
+  #hero .container .text span {
+    font-size: 30px !important;
+  }
+}
+/* === END HERO SECTION === */
+
+/* === START OUR PRODUCTS === */
+#products {
+  padding-top: calc(var(--padding-top-100) / 2);
+  padding-bottom: var(--padding-bottom-100);
+}
+#products .container .uploading-images {
+  margin-top: 50px;
+  background: #eee;
+}
+#products .container .uploading-images > img {
+  height: 200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px 0;
+  object-fit: cover;
+}
+#products .container .uploading-images .input input {
+  display: none;
+}
+#products .container .uploading-images .input label {
+  display: block;
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 20px 0;
+  color: var(--light-color);
+  cursor: pointer;
+  transition: var(--transition-5m);
+}
+#products .container .uploading-images .input label:hover {
+  box-shadow: 0 0 10px 0 #333;
+}
+#products .container .uploading-images .images-uploaded > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+#products .container .uploading-images .images-uploaded > div:not(:last-child) {
+  border-bottom: 2px solid var(--main-color);
+}
+#products .container .uploading-images .images-uploaded > div img {
+  height: 300px;
+  width: 50%;
+  object-fit: contain;
+}
+#products .container .uploading-images .images-uploaded > div span {
+  font-size: 30px;
+  cursor: pointer;
+}
+/* === END OUR PRODUCTS === */
+
+.uploaded-image {
+  position: relative;
+}
+.uploaded-image h3 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.uploaded-image .choosing-models {
+  position: relative;
+  /* background-color: #333; */
+  /* height: fit-content; */
+}
+.uploaded-image .choosing-models ul {
+  background-color: var(--dark-color);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.uploaded-image .choosing-models ul li {
+  color: var(--light-color);
+  padding: 10px 20px;
+  transition: var(--transition-5m);
+  cursor: pointer;
+}
+/* .uploaded-image .choosing-models ul li:hover,
+.active {
+  background-color: var(--light-color) !important;
+  color: var(--dark-color) !important;
+  border: 1px solid var(--main-color);
+}
+.uploaded-image .choosing-models ul li:not(:last-child) {
+  border-bottom: 1px solid var(--light-color);
+} */
+.uploaded-image .choosing-models img.selected-image {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* margin-top: 400px; */
+}
+.uploaded-image .list-diseases {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+.uploaded-image .list-diseases > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 190px;
+  margin-bottom: 30px;
+}
+.uploaded-image input {
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.uploaded-image input::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-color);
+  border-radius: 2px;
+}
+/* Special color for each diseas */
+[data-color="orangered"]:checked::before:checked::before {
+  background-color: orangered !important;
+}
+[data-color="orange"]:checked::before:checked::before {
+  background-color: orange !important;
+}
+[data-color="red"]:checked::before {
+  background-color: red !important;
+}
+[data-color="gray"]:checked::before {
+  background-color: gray !important;
+}
+[data-color="yellow"]:checked::before {
+  background-color: yellow !important;
+}
+[data-color="green"]:checked::before {
+  background-color: green !important;
+}
+[data-color="blue"]:checked::before {
+  background-color: blue !important;
+}
+[data-color="black"]:checked::before {
+  background-color: black !important;
+}
+[data-color="aqua"]:checked::before {
+  background-color: aqua !important;
+}
+[data-color="brown"]:checked::before {
+  background-color: brown !important;
+}
+.uploaded-image input::after {
+  content: none;
+  font-family: "Font Awesome 6 free";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-5m);
+  /* transform: rotateY(180deg); */
+}
+.uploaded-image input:checked::after {
+  content: "\f058";
+  color: var(--dark-color);
+  font-weight: 900;
+}
+.uploaded-image input:checked::before {
+  background-color: var(--main-color);
+}
+.uploaded-image .list-diseases .body label {
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+.uploaded-image .waiting-data {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 200px;
+}
+
+.uploaded-image .waiting-data span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--dark-color);
+  animation: loading 1s linear alternate infinite both;
+}
+.uploaded-image .waiting-data span:nth-child(2) {
+  animation-delay: 300ms;
+}
+.uploaded-image .waiting-data span:last-child {
+  animation-delay: 600ms;
+}
+
+@keyframes loading {
+  to {
+    transform: scale(3);
+  }
+}
+
+.uploaded-image .image-error {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 30px;
+  color: var(--dark-color);
+}
+
+.hidden {
+  display: none !important;
+}
+.diseases-places {
+  /* position: relative; */
+  /* margin-top: 100px; */
+}
+.place {
+  border: 5px solid var(--main-color);
+  border-radius: 5px;
+  position: absolute;
+}
+.place::before {
+  content: attr(score);
+  position: absolute;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: inherit;
+}
+.place::after {
+  content: attr(disease-name);
+  text-align: center;
+  position: absolute;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: inherit;
+}
+.place.green {
+  border-color: green;
+}
+.place.orange {
+  border-color: orangered;
+}
+.place.red {
+  border-color: red;
+}
+.place.gray {
+  border-color: gray;
+}
+.place.yellow {
+  border-color: yellow;
+}
+.place.blue {
+  border-color: blue;
+}

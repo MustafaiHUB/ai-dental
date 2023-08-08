@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/products.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css" />
+
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    /> -->
+    <!-- Page Logo -->
+    <link rel="icon" href="assets/Images/ai-logo-2.png" />
+    <link rel="apple-touch-icon" href="assets/Images/ai-logo-2.png" />
+    <title>ToothVision: Our Product</title>
+  </head>
+  <body>
+    <!-- === START SCROLL TO TOP BUTTON === -->
+    <div id="scroll-top">&#8593;</div>
+    <!-- === END SCROLL TO TOP BUTTON === -->
+    <!-- === START HEADER === -->
+    <header></header>
+    <!-- === END HEADER === -->
+
+    <main>
+      <!-- === START HERO SECTION === -->
+      <section id="hero">
+        <div class="container">
+          <div class="overlay"></div>
+          <div class="text">
+            <h1>our products is here</h1>
+            <span>AI for you, with you</span>
+          </div>
+        </div>
+        <video autoplay loop muted>
+          <source src="assets/Images/Upload.mp4" type="video/mp4" />
+        </video>
+      </section>
+      <!-- === END HERO SECTION === -->
+
+      <!-- === START OUR PRODUCTS === -->
+      <section class="section" id="products">
+        <div class="container">
+          <h2 class="title">our product</h2>
+          <div class="uploading-images">
+            <div class="input">
+              <input id="upload-input" type="file" multiple="multiple" />
+              <label for="upload-input">Upload an image</label>
+            </div>
+            <img
+              class="current-img"
+              src="assets/Images/ai-dental-blue.png"
+              alt="ToothVision"
+            />
+            <div class="uploaded-image">
+              <div class="list-diseases hidden">
+                <!-- <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="all"
+                    id="all"
+                    data-disease-name="all"
+                    data-color="red"
+                    checked
+                    value="all"
+                  />
+                  <label for="caries">All</label>
+                </div> -->
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="caries"
+                    id="caries"
+                    data-disease-name="caries"
+                    data-color="red"
+                    value="caries"
+                  />
+                  <label for="caries">caries</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="periapical lesion"
+                    id="periapical-lesion"
+                    data-disease-name="periapical lesion"
+                    data-color="green"
+                    value="periapical lesion"
+                  />
+                  <label for="periapical-lesion">periapical lesion</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="root canal treatment"
+                    id="root-canal-treatment"
+                    data-disease-name="root canal treatment"
+                    data-color="yellow"
+                    value="root canal treatment"
+                  />
+                  <label for="root-canal-treatment">root canal treatment</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="recurrent caries"
+                    id="recurrent-caries"
+                    data-disease-name="recurrent caries"
+                    data-color="blue"
+                    value="recurrent caries"
+                  />
+                  <label for="recurrent-caries">recurrent caries</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="remaining root"
+                    id="remaining-root"
+                    data-disease-name="remaining root"
+                    data-color="orange"
+                    value="remaining root"
+                  />
+                  <label for="remaining-root">remaining root</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="URCT"
+                    id="URCT"
+                    data-disease-name="URCT"
+                    data-color="orangered"
+                    value="URCT"
+                  />
+                  <label for="URCT">URCT</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="crown"
+                    id="crown"
+                    data-disease-name="crown"
+                    data-color="black"
+                    value="crown"
+                  />
+                  <label for="crown">crown</label>
+                </div>
+
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="OR"
+                    id="OR"
+                    data-disease-name="OR"
+                    data-color="black"
+                    value="OR"
+                  />
+                  <label for="OR">OR</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="ROOT"
+                    id="ROOT"
+                    data-disease-name="ROOT"
+                    data-color="black"
+                    value="ROOT"
+                  />
+                  <label for="ROOT">ROOT</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="CNFT"
+                    id="CNFT"
+                    data-disease-name="CNFT"
+                    data-color="black"
+                    value="CNFT"
+                  />
+                  <label for="CNFT">CNFT</label>
+                </div>
+                <div>
+                  <input
+                    class="disease"
+                    type="checkbox"
+                    name="Perio"
+                    id="Perio"
+                    data-disease-name="Perio"
+                    data-color="black"
+                    value="Perio"
+                  />
+                  <label for="Perio">Perio</label>
+                </div>
+              </div>
+              <div class="choosing-models">
+                <!-- <div class="waiting-data">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div> -->
+
+                <!-- <h2 class="image-error">No Disease Was Found</h2> -->
+
+                <!-- <img
+                    class="selected-image"
+                    src="assets/Images/hero-image-01.jpg"
+                    alt="Tooth Vision"
+                  /> -->
+                <!-- </div> -->
+
+                <!-- <div class="place"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- === END OUR PRODUCTS === -->
+    </main>
+
+    <!-- === START FOOTER === -->
+    <footer></footer>
+    <!-- === END FOOTER === -->
+    <script src="script.js"></script>
+    <script src="diseasesInfo.js"></script>
+  </body>
+</html>
