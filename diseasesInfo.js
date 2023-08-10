@@ -30,9 +30,11 @@ function changeInput(e) {
 
     // Reset checked input to fasle
     checkboxInput.forEach(input => {
-        input.checked = false;
-        input.removeAttribute('disabled');
-        input.style.opacity = 1;
+        // input.checked = false;
+        // input.removeAttribute('disabled');
+        // input.style.opacity = 1;
+
+        input.closest('div').style.display = 'block';
     });
     diseasesList.classList.add('hidden');
     currentImage.classList.remove('hidden');
@@ -174,8 +176,10 @@ async function JSONcall2(imagesName) {
                 // Disable the inputs that not in the diseases
                 checkboxInput.forEach(input => {
                     if (input.value !== diseases[0] && !diseases.includes(input.value)) {
-                        input.setAttribute("disabled", "disabled");
-                        input.style.opacity = "0.5";
+                        // input.setAttribute("disabled", "disabled");
+                        // input.style.opacity = "0.5";
+                        // input.style.display = 'none';
+                        input.closest('div').style.display = 'none';
                     }
                 })
 

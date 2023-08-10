@@ -132,24 +132,25 @@
   /* margin-top: 400px; */
 }
 .uploaded-image .list-diseases {
+  text-align: center;
   padding: 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  display: flex;
+  flex-wrap: wrap;
 }
 .uploaded-image .list-diseases > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1 0 190px;
-  margin-bottom: 30px;
+  flex: 1 0 100px;
+  padding: 10px 0;
 }
 .uploaded-image input {
   border: none;
   outline: none;
   position: relative;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 .uploaded-image input::before {
   content: "";
@@ -169,8 +170,8 @@
 [data-color="red"]:checked::before {
   background-color: red !important;
 }
-[data-color="gray"]:checked::before {
-  background-color: gray !important;
+[data-color="crimson"]:checked::before {
+  background-color: crimson !important;
 }
 [data-color="yellow"]:checked::before {
   background-color: yellow !important;
@@ -181,14 +182,17 @@
 [data-color="blue"]:checked::before {
   background-color: blue !important;
 }
-[data-color="black"]:checked::before {
-  background-color: black !important;
+[data-color="darkorchid"]:checked::before {
+  background-color: darkorchid !important;
 }
 [data-color="aqua"]:checked::before {
   background-color: aqua !important;
 }
 [data-color="brown"]:checked::before {
   background-color: brown !important;
+}
+[data-color="burlywood"]:checked::before {
+  background-color: burlywood !important;
 }
 .uploaded-image input::after {
   content: none;
@@ -200,7 +204,6 @@
   justify-content: center;
   align-items: center;
   transition: var(--transition-5m);
-  /* transform: rotateY(180deg); */
 }
 .uploaded-image input:checked::after {
   content: "\f058";
@@ -299,12 +302,27 @@
 .place.red {
   border-color: red;
 }
-.place.gray {
-  border-color: gray;
+.place.crimson {
+  border-color: crimson;
 }
 .place.yellow {
   border-color: yellow;
 }
 .place.blue {
   border-color: blue;
+}
+.place.orangered {
+  border-color: orangered;
+}
+.place.darkorchid {
+  border-color: darkorchid;
+}
+.place.aqua {
+  border-color: aqua;
+}
+.place.brown {
+  border-color: brown;
+}
+.place.burlywood {
+  border-color: burlywood;
 }
